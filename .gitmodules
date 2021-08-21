@@ -1,0 +1,3 @@
+[submodule "thirdparty/cpp-libp2p"]
+	path = thirdparty/cpp-libp2p
+	url = https://github.com/fire/godot-libp2p.git
