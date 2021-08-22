@@ -1,9 +1,9 @@
 name: 🍎 Macos Builds
 on:
   push:
-    branches: [master, github_actions]
+    branches: [main, github_actions]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 # Global Cache Settings
 env:
@@ -25,7 +25,7 @@ jobs:
       # Clone our module under the correct directory
       - uses: actions/checkout@v2
         with:
-          path: modules/ewbik
+          path: modules/p2p
 
       # Upload cache on completion and check it out now
       - name: Load .scons_cache directory
