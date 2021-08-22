@@ -5,6 +5,8 @@
 
 #include "libp2p/basic/varint_reader.hpp"
 
+#include <gsl/span_ext>
+#include <gsl/gsl_util>
 #include <vector>
 
 namespace {

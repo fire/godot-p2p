@@ -5,6 +5,8 @@
 
 #include <libp2p/protocol/kademlia/impl/find_peer_executor.hpp>
 
+#include <gsl/gsl_util>
+
 #include <libp2p/protocol/kademlia/config.hpp>
 #include <libp2p/protocol/kademlia/error.hpp>
 #include <libp2p/protocol/kademlia/impl/session.hpp>
@@ -257,7 +259,7 @@ namespace libp2p::protocol::kademlia {
                 peer.info.id,
                 gsl::span(peer.info.addresses.data(),
                           static_cast<
-                              gsl::span<const multi::Multiaddress>::index_type>(
+                              gsl::span<const multi::Multiaddress>::size_type>(
                               peer.info.addresses.size())),
                 peer::ttl::kDay);
         if (not add_addr_res) {

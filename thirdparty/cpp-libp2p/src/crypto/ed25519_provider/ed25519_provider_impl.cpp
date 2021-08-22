@@ -5,6 +5,8 @@
 
 #include <libp2p/crypto/ed25519_provider/ed25519_provider_impl.hpp>
 
+#include <gsl/gsl_util>
+
 #include <openssl/evp.h>
 #include <libp2p/crypto/common_functions.hpp>
 #include <libp2p/crypto/error.hpp>

@@ -27,9 +27,11 @@
  * THE SOFTWARE.
  **/
 
-#include <gsl/span>
 #include <libp2p/multi/multibase_codec/codecs/base32.hpp>
 #include <libp2p/multi/multibase_codec/codecs/base_error.hpp>
+
+#include <gsl/gsl_util>
+#include <gsl/span_ext>
 
 namespace libp2p::multi::detail {
   const std::string kUpperBase32Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";

@@ -5,6 +5,8 @@
 
 #include <libp2p/protocol/kademlia/impl/get_value_executor.hpp>
 
+#include <gsl/gsl_util>
+
 #include <boost/multi_index/hashed_index.hpp>
 #include <boost/multi_index/ordered_index.hpp>
 #include <boost/multi_index_container.hpp>
@@ -256,7 +258,7 @@ namespace libp2p::protocol::kademlia {
                 peer.info.id,
                 gsl::span(peer.info.addresses.data(),
                           static_cast<
-                              gsl::span<const multi::Multiaddress>::index_type>(
+                              gsl::span<const multi::Multiaddress>::size_type>(
                               peer.info.addresses.size())),
                 peer::ttl::kDay);
         if (not add_addr_res) {

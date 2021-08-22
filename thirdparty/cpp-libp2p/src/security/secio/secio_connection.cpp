@@ -6,6 +6,8 @@
 #include <libp2p/security/secio/secio_connection.hpp>
 
 #include <algorithm>
+#include <gsl/gsl_util>
+#include <gsl/span_ext>
 
 #include <arpa/inet.h>
 #include <libp2p/common/byteutil.hpp>

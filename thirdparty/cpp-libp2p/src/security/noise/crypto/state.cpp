@@ -6,6 +6,7 @@
 #include <cstring>
 #include <limits>
 #include <sstream>
+#include <gsl/span_ext>
 
 #include <libp2p/security/noise/crypto/state.hpp>
 

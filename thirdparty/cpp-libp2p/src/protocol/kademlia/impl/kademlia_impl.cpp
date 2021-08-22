@@ -222,7 +222,7 @@ namespace libp2p::protocol::kademlia {
             peer_info.id,
             gsl::span(
                 peer_info.addresses.data(),
-                static_cast<gsl::span<const multi::Multiaddress>::index_type>(
+                static_cast<gsl::span<const multi::Multiaddress>::size_type>(
                     peer_info.addresses.size())),
             permanent ? peer::ttl::kPermanent : peer::ttl::kDay);
     if (not upsert_res) {
@@ -486,7 +486,7 @@ namespace libp2p::protocol::kademlia {
                   gsl::span(
                       peer.info.addresses.data(),
                       static_cast<
-                          gsl::span<const multi::Multiaddress>::index_type>(
+                          gsl::span<const multi::Multiaddress>::size_type>(
                           peer.info.addresses.size())),
                   peer::ttl::kDay);
         }

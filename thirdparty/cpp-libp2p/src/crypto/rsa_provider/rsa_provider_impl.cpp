@@ -6,6 +6,7 @@
 #include <libp2p/crypto/rsa_provider/rsa_provider_impl.hpp>
 
 #include <memory>
+#include <gsl/span_ext>
 
 #include <openssl/err.h>
 #include <openssl/rsa.h>
